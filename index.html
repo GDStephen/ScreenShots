@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<script>
+var demo = require('bindings')('demo.node')
+var screenshots = require('./build/Release/screenshots');
+
+function runAsync() {
+	screenshots.screenShotsAsync(`D:\aaaq555中文qqq.png`, (a, b)=>{
+		console.log("a:" + a+".b:"+b);
+	});
+}
+
+window.onload = function() {
+    runAsync();
+    document.write('add(3, 5) => ' + demo.add(3, 5));
+}
+
+</script>
+</html>
